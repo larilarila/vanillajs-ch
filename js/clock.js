@@ -1,12 +1,12 @@
-const timeBox = document.querySelector(".clock"),
-  clockIn = timeBox.querySelector("h1");
+const clockContainer = document.querySelector(".clock"),
+  clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {
   const date = new Date();
-  const hours = date.getHours();
   const minutes = date.getMinutes();
+  const hours = date.getHours();
   const seconds = date.getSeconds();
-  clockIn.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
