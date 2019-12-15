@@ -45,17 +45,17 @@ const deleteToDo = dele => {
 };
 
 const backToDo = dele => {
-  paintToDo(dele.target.parentNode.querySelector("span").innerHTML);
+  paintToDo(dele.target.parentNode.querySelector("span").innerText);
   deleteToDo(dele);
 };
 
 const doneToDo = dele => {
   const item = dele.target.parentNode.cloneNode(true);
   const button = item.getElementsByTagName("button");
-  const value = item.querySelector("span").innerHTML;
+  const value = item.querySelector("span").innerText;
   const doneId = doneToDo.length + 1;
   item.id = doneId;
-  button[0].innerHTML = "<img src='img/plus.png' width='7px' heigh='7px'>";
+  button[0].innerText = "➕";
 
   button[0].addEventListener("click", backToDo);
   button[1].addEventListener("click", deleteToDo);
@@ -79,14 +79,14 @@ const paintToDo = text => {
   const span = createNode("span");
   let newId = paint ? toDos.length + 1 : doneAim.length + 1;
   if (paint) {
-    doneBtn.innerHTML = "<img src='img/check.png' width='7px' heigh='7px'>";
+    doneBtn.innerText = "✔";
     doneBtn.addEventListener("click", doneToDo);
   } else {
-    doneBtn.innerHTML = "<img src='img/plus.png' width='7px' heigh='7px'>";
+    doneBtn.innerText = "➕";
     doneBtn.addEventListener("click", backToDo);
   }
 
-  delBtn.innerHTML = "<img src='img/dele.png' width='7px' heigh='7px'>";
+  delBtn.innerText = "➖";
 
   delBtn.addEventListener("click", deleteToDo);
 

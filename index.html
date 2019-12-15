@@ -4,31 +4,33 @@
     <meta charset="utf-8" />
     <title>Daily focus on your new tab page</title>
     <link rel="stylesheet" href="css\index.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree:500,600,700|Blinker:400,700,900|Pacifico&display=swap'); 
+    </style> 
   </head>
 
   <body class="v2">
-    <ul id="background"></ul>
     <header>
       <section class="top-left">
         <h1 class="logo">
-          <img src="C:\Users\SAMSUNG\Documents\vanillajs-ch\img\penguin.png" width="30" height="30"></a>
+          <img src="img\penguin.png" width="30" height="30"></a>
         </h1>
-        <nav class="main-nav">
-            <a href="daum.net" class="daum">Daum</a>
-            <a href="google.com" class="">Google</a>
-            <a href="naver.com" class="">Naver</a>
+        <nav class="social">
+            <a href="daum.net" class="link">Daum</a>
+            <a href="google.com" class="link">Google</a>
+            <a href="naver.com" class="link">Naver</a>
         </nav>
       </section>
       <section class="top-right">
         <nav class="available-links">
           <a
             href="https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=ko"
-            ><img
+            class="internet"><img
               src="C:\Users\SAMSUNG\Documents\vanillajs-ch\img\chrome.png"
               width="30"
               height="30"
           /></a>
-          <a href="https://www.mozilla.org/ko/firefox/new/"
+          <a href="https://www.mozilla.org/ko/firefox/new/" class="internet"
             ><img
               src="C:\Users\SAMSUNG\Documents\vanillajs-ch\img\firefox.png"
               width="30"
@@ -39,14 +41,13 @@
     </header>
     <main>
       <div class="clock">
-        <h1>00:00:00</h1>
+        <div class="time">00:00:00</div>
       </div>
       <form class="nameform">
-        <input class="name" type="text" placeholder="What is your name?" />
+        <span>Good Luck!</span><span class=greetings><input class="name" type="text" placeholder="What is your name?" /></span>
       </form>
-      <h4 class="greetings"></h4>
       <form class="toDoForm">
-        <input class="today" type="text" placeholder="Write a to do" />
+         <input class="today" type="text" placeholder="Write a to do" />
       </form>
       <div class="sec">
         <div class="sec_one">
