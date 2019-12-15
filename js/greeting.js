@@ -1,5 +1,5 @@
-const form = document.querySelector(".form"),
-  input = form.querySelector("input"),
+const nameForm = document.querySelector(".nameform"),
+  nameInput = nameForm.querySelector(".name"),
   greeting = document.querySelector(".greetings");
 
 const USER_NAME = "currentUser",
@@ -11,18 +11,18 @@ function saveName(text) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  const currentValue = input.value;
-  paintGreeting(currentValue);
-  saveName(currentValue);
+  const currentNameValue = nameInput.value;
+  paintGreeting(currentNameValue);
+  saveName(currentNameValue);
 }
 
 function askForName() {
-  form.classList.add(SHOWING_FR);
-  form.addEventListener("submit", handleSubmit);
+  nameForm.classList.add(SHOWING_FR);
+  nameForm.addEventListener("submit", handleSubmit);
 }
 
 function paintGreeting(text) {
-  form.classList.remove(SHOWING_FR);
+  nameForm.classList.remove(SHOWING_FR);
   greeting.classList.add(SHOWING_FR);
   greeting.innerText = `Hello ${text}`;
 }

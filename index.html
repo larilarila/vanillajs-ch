@@ -2,9 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Daily focus on your new tab page</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css\index.css" />
   </head>
 
   <body class="v2">
@@ -38,28 +37,33 @@
         </nav>
       </section>
     </header>
-  <main>
-      <div id="container">
-          <div id="inner-container">
-              <div class="clock">
-                  <h1>00:00:00</h1>
-              </div>
-              <form class="form">
-                  <input type="text" placeholder="What is your name?">
-              </form>
-              <h4 class="greetings"></h4>
-              <form class="toDoForm">
-                  <input type="text" placeholder="Write a to do" center/>
-              </form>
-              <ul class="toDoList"></ul>
-              <div class="weather"></div>
-          </div>
+    <main>
+      <div class="clock">
+        <h1>00:00:00</h1>
       </div>
- </main>
- <script src="js/background.js"></script>
- <script src="js/clock.js"></script>
- <script src="js/greeting.js"></script>
- <script src="js/todo.js"></script>
- <script src="js/weather.js"></script>
+      <form class="nameform">
+        <input class="name" type="text" placeholder="What is your name?" />
+      </form>
+      <h4 class="greetings"></h4>
+      <form class="toDoForm">
+        <input class="today" type="text" placeholder="Write a to do" />
+      </form>
+      <div class="sec">
+        <div class="sec_one">
+          <div class="one">Pending</div>
+          <ul class="pL"></ul>
+        </div>
+        <div class="sec_two">
+          <div class="two">Finished</div>
+          <ul class="fL"></ul>
+        </div>
+      </div>
+      <span class="weather"></span>
+      <script src="js/background.js"></script>
+      <script src="js/clock.js"></script>
+      <script src="js/greeting.js"></script>
+      <script src="js/todo.js"></script>
+      <script src="js/weather.js"></script>
+    </main>
   </body>
 </html>
